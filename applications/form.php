@@ -12,7 +12,7 @@
             <?php session_unset(); } ?>
 
             <div class="card card-body"> 
-            <form action="save_task.php" method="POST">
+            <form action="save_task.php" method="POST" enctype='multipart/form-data'>
             <div class="form-group">
             <input type="text" name="isbn" class= "form-control" placeholder="Agrega ISBN" autofocus></div>
 

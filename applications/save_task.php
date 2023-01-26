@@ -8,8 +8,15 @@
    $author_name = $_POST['author_name'] ;
    $author_lastName = $_POST['author_lastname'] ;
    $description = $_POST['description'] ;
-   $image = $_POST['image'] ;
-   $query = "INSERT INTO Books (isbn,title,author_name,author_lastName,description,image) VALUES ('$isbn','$title','$author_name','$author_lastName','$description','$image')";
+   $image_name = basename($_FILES['image']['name']);
+   $image_file= $_FILES['image']['tmp_name'];
+   
+   $directory_route = '../assets/img/'. $image_name;
+   $db_image_route = 'assets/img/'. $image_name;
+   move_uploaded_file($image_file,$directory_route);
+
+   
+   $query = "INSERT INTO books (isbn, title, author_name, author_lastname, description, image) VALUES ('$isbn','$title','$author_name','$author_lastName','$description','$db_image_route')";
    $result = mysqli_query($conn, $query);
    if (!$result)  {
     die("query fallido");
