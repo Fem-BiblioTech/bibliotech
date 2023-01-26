@@ -23,14 +23,13 @@
             
 
             <div class="card card-body"> 
-            <form action="save_task.php" method="POST">
+            <form action="save_task.php" method="POST" enctype='multipart/form-data'>
             
             <div class="form-group"><label for="title">Título</label>
             <input type="text" name="title" id="title" class= "form-control" placeholder="Agrega el título" autofocus></div>
 
             <div class="form-group"><label for="author_name">Nombre autor</label>
             <input type="text" name="author_name" id="author_name" class= "form-control" placeholder="Agrega el nombre" autofocus></div>
-            <form action="save_task.php" method="POST" enctype='multipart/form-data'>
             <div class="form-group">
             <input type="text" name="isbn" class= "form-control" placeholder="Agrega ISBN" autofocus></div>
 
