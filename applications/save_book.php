@@ -1,7 +1,7 @@
 <?php include("../db.php");
 
 
- if (isset($_POST['save_task']))
+ if (isset($_POST['save_book']))
  {
    $isbn = $_POST['isbn'] ;
    $title = $_POST['title'] ;
@@ -23,6 +23,6 @@
    }
    $_SESSION['message'] = 'Libro agregado satisfactoriamente';
    $_SESSION['message_type'] = 'success';
-   header ("Location:form.php");
+   header ("Location: /bibliotech");
   }
     
