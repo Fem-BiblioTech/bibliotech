@@ -11,7 +11,7 @@
                     </li>
                 </ul>
            
-            <form class="d-flex" role="search">
+            <form action="index.php" method="POST" class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Buscar por nombre de autor o por título" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
