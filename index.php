@@ -6,14 +6,13 @@
 
 <?php include("applications/nav.php")
 ?>
-
+<div class= "containerBook">
 <?php 
 $query = "SELECT * FROM books";
 $result_books = mysqli_query ($conn, $query);
 
 while ($row = mysqli_fetch_array ($result_books)) {
 ?>
-
 <div class="card" style="width: 18rem;">
   <img src= <?php echo $row ['image']?> class="card-img-top">
   <div class="card-body">
@@ -21,6 +20,7 @@ while ($row = mysqli_fetch_array ($result_books)) {
     <h5 class="card-text"><?php echo $row ['author_name'] . ' ' . $row['author_lastname'] ?></h5>
   </div>
 </div>
-<?php } ?> 
+<?php } ?>
+</div> 
 <?php include("applications/footer.php")
 ?>  
