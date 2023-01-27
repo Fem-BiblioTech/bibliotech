@@ -6,6 +6,7 @@
 
 <?php include("applications/nav.php")
 ?>
+
 <div class= "containerBook">
 <?php 
 $query = "SELECT * FROM books";
@@ -22,5 +23,9 @@ while ($row = mysqli_fetch_array ($result_books)) {
 </div>
 <?php } ?>
 </div> 
+
+<?php include ("applications/read.php")
+?>
+
 <?php include("applications/footer.php")
-?>  
+?>

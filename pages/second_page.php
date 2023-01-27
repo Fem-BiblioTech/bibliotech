@@ -1,8 +1,12 @@
-<?php include("db.php")
+<?php include("../db.php")
 ?>
 
-<?php include("applications/header.php")
+<?php include("../applications/header.php")
 ?>
+
+<?php include ("../applications/read.php");
+
+while ($row= mysqli_fetch_array($sql_query)){?>
 
 <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
@@ -28,5 +32,8 @@
   </div>
 </div>
 
-<?php include("applications/footer.php")
+<?php }
+?>  
+
+<?php include("../applications/footer.php")
 ?> 
