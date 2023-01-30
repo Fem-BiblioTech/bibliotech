@@ -4,7 +4,8 @@
 <?php include("applications/header.php")
 ?>
 
-<?php include("applications/nav.php")
+<?php include("applications/nav.php");
+include("applications/banner.php")
 ?>
 
 <div class= "containerBook">

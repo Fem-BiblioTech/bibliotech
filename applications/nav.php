@@ -1,7 +1,7 @@
 <nav> 
     <nav class= "navbar navbar-dark bg-dark">
         <div class="container">
-            <a href="/bibliotech/index.php" class="navbar-brand">BiblioTech </a>
+            <a href="/bibliotech/index.php" class="navbar-brand fw-bold fs-4">Biblio<span class="tech">Tech</span></a>
 
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -12,12 +12,12 @@
                 </ul>
            
             <form action="/bibliotech/pages/second_page.php" method="POST" class="d-flex" role="search">
-                <input class="form-control me-2" type="search" name= "search" placeholder="Buscar por nombre de autor o por título" aria-label="Search">
-                <button class="btn btn-outline-success" value="search" type="submit">Search</button>
+                <div class="input-container">
+                    <input class="form-control me-2" type="search" name= "search" placeholder="Buscar por nombre de autor o por título" aria-label="Search">
+                    <button class="btn btn-light" value="search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
             </form>
         </div>
 </nav>
-<div class= "bannerContainer">
-    <img src="assets\project_img\fondo_header.jpg" alt="">
-    <h2 class= "styleNav">AÑADE Y ORGANIZA </br> TUS LIBROS</h2>
-</div>
+
+<main>

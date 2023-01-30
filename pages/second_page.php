@@ -1,7 +1,6 @@
 <?php include("../applications/header.php"); include  ("../applications/read.php"); include ("../applications/nav.php"); 
 
-// include ("../applications/delete_book.php"); 
-// include ("../applications/edit_book.php");
+
 ?>
 
 <?php 
@@ -19,13 +18,14 @@ while ($row= mysqli_fetch_array($result)){?>
         <h5 class="card-text"><?php echo $row ["author_name"]. ' ' . $row['author_lastname'] ?></h5>
         <p class="card-text"><?php echo $row ["isbn"] ?></p>
         <p class="card-text"><?php echo $row ["description"] ?></p>
-        <a href = "../applications/edit_book.php?isbn= <?php echo $row['isbn'] ?>" class= "btn btn-secundary"> 
+
+        <a href = "../applications/edit_book.php?isbn= <?php echo $row['isbn'] ?>" class="btn btn-secondary"> 
         Editar
         </a>
-        <a href = "../applications/delete_book.php?isbn=<?= $row['isbn']?>" class= "btn btn-secundary">
+       <a href = "../applications/delete_book.php?isbn=<?= $row['isbn']?>" class="btn btn-danger">
         Eliminar
            </a>
-
+           
         
       </div>
     </div>
