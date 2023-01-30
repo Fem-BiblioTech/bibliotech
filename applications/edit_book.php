@@ -1,21 +1,30 @@
 <?php 
-// include("../db.php");
+include("../db.php");
 
-$id = $_POST ['isbn'];
-$query = "SELECT * FROM books WHERE isbn = $id";
+$isbn = $_GET['isbn'];
+$query = "SELECT * FROM books WHERE isbn = ".$isbn."";
 $result = mysqli_query($conn, $query);
 // if (mysqli_num_rows($result) == 1) {
 //     echo ('Puedes editar el libro');
 //  }
+if (mysqli_num_rows($result) == 1) {
+    $row = mysqli_fetch_array($result);
+    $title = $row['title'];
+    $author_name = $row['author_name'];
+    $author_lastName = $row['author_lastname'];
+    $description = $row['description'];
+    $image_name = basename($_FILES['image']['name']);
+}
+
 if (isset($_POST['update'])) {
-    $isbn = $_POST['isbn'];
+    $isbn = $_GET['isbn'];
     $title = $_POST['title'];
     $author_name = $_POST['author_name'];
     $author_lastName = $_POST['author_lastname'];
     $description = $_POST['description'];
     $image_name = basename($_FILES['image']['name']);
     $image_file = $_FILES['image']['tmp_name'];
-    $query = "UPDATE books set title = '$title', author_name = '$author_name', author_lastname = ' $author_lastName', description = '$description', image = '$image_file' WHERE isbn = $isbn";
+    $query = "UPDATE books set title = '$title', author_name = '$author_name', author_lastname = '$author_lastName', description = '$description', image = '$image_name' WHERE isbn = $isbn";
     mysqli_query($conn, $query);
     $_SESSION['message'] = 'Libro actualizado con éxito';
     $_SESSION['message_type'] = 'warning';
@@ -27,7 +36,7 @@ if (isset($_POST['update'])) {
     <div class="row">
         <div class="col-md-4 mx-auto">
             <div class="card card-body">
-                <form action="applications/save_book.php">
+                <form action="/bibliotech/applications/edit_book.php?isbn=<?php echo $_GET['isbn'];?>" method="POST">
                     <div class="form-group">
                         <label for="title">Título</label>
                         <input type="text" name="title" id="title" class="form-control"
@@ -40,7 +49,7 @@ if (isset($_POST['update'])) {
                                 <label for="author_lastName">Apellido autor</label>
                                 <input type="text" name="author_lastname" id="author_lastName" class="form-control"
                                     placeholder="Actualiza el apellido" autofocus
-                                    value="<?php echo $author_lastname; ?>" </div>
+                                    value="<?php echo $author_lastName; ?>" </div>
                                 <div class="form-group">
                                     <label for="isbn">ISBN</label>
                                     <input type="text" name="isbn" id="isbn" class="form-control"
@@ -48,9 +57,8 @@ if (isset($_POST['update'])) {
 
                                     <div class="form-group">
                                         <label for="description">Descripción</label>
-                                        <textarea name="description" id="description" rows="2" class="form-control"
-                                            placeholder="Actualiza una descripción" autofocus
-                                            value="<?php echo $description; ?>"></textarea>
+                                        <textarea name="description" id="description" rows="10" cols="30" class="form-control"
+                                            placeholder="Actualiza una descripción" ><?php echo $description; ?></textarea>
                                     </div>
                                     <div class="form-group">
                                         <label for="image">Imagen</label>
