@@ -8,7 +8,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <form action="applications/save_book.php" method="POST" enctype='multipart/form-data'>
+      <form action="/bibliotech/applications/save_book.php" method="POST" enctype='multipart/form-data'>
             
             <div class="form-group"><label for="title">Título</label>
             <input type="text" name="title" id="title" class= "form-control" placeholder="Agrega el título" autofocus></div>
