@@ -17,3 +17,7 @@
             </form>
         </div>
 </nav>
+<div class= "bannerContainer">
+    <img src="assets\project_img\fondo_header.jpg" alt="">
+    <h2 class= "styleNav">AÑADE Y ORGANIZA </br> TUS LIBROS</h2>
+</div>

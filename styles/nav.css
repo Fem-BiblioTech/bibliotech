@@ -1,0 +1,14 @@
+.styleNav{
+    position: absolute;
+    top: 180px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 80px;
+    font-weight: 800;
+    display: flex;
+    text-align:center;
+    color: white;   
+}
+
+.bannerContainer{
+    position: relative;
+}
