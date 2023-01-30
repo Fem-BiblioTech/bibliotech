@@ -7,9 +7,11 @@ if(!isset($_POST['search'])){
 
 $search= $_POST['search'];
 
-$SQL_READ = "SELECT * FROM books WHERE author_name LIKE '%$".search."%' OR author_lastname LIKE '%$".search."%' OR isbn LIKE '%$".search."%'OR title LIKE '%$".search."%'";
+$query = "SELECT * FROM books WHERE author_name LIKE '%$search%' OR author_lastname LIKE '%$search%' OR isbn LIKE '%$search%'OR title LIKE '%$search%'";
 
-$sql_query = mysqli_query($conn,$SQL_READ);
-header ("Location:pages/second_page");
+$result = mysqli_query($conn,$query);
+if (!$result)  {
+    die("query fallido");
+   }
 
 ?>
