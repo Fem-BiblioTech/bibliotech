@@ -1,4 +1,4 @@
-# :books: BiblioTech bookmark:   
+# :books: BiblioTech :bookmark:   
 
 Desde BiblioTech organizamos nuestras recomendaciones de libros en un programa web.   
 Nuestro inventario permite añadir nuevas recomendaciones, actualizarlas y borrarlas si es necesario.   
