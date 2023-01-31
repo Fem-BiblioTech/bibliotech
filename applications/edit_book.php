@@ -1,8 +1,15 @@
 <?php 
+include("../applications/header.php");
+include ("../applications/nav.php"); 
+// include ("../applications/banner.php"); 
 include("../db.php");
+?>
+
+<?php
+
 
 $isbn = $_GET['isbn'];
-$query = "SELECT * FROM books WHERE isbn = ".$isbn."";
+$query = "SELECT * FROM books WHERE isbn = " . $isbn . "";
 $result = mysqli_query($conn, $query);
 // if (mysqli_num_rows($result) == 1) {
 //     echo ('Puedes editar el libro');
@@ -24,9 +31,9 @@ if (isset($_POST['update'])) {
     $description = $_POST['description'];
     $image_name = basename($_FILES['image']['name']);
     $image_file = $_FILES['image']['tmp_name'];
-    $directory_route = '../assets/img/'. $image_name;
-    move_uploaded_file($image_file,$directory_route);
-    $db_image_route = 'assets/img/'. $image_name;
+    $directory_route = '../assets/img/' . $image_name;
+    move_uploaded_file($image_file, $directory_route);
+    $db_image_route = 'assets/img/' . $image_name;
     $query = "UPDATE books set title = '$title', author_name = '$author_name', author_lastname = '$author_lastName', description = '$description', image = '$db_image_route' WHERE isbn = $isbn";
     mysqli_query($conn, $query);
     $_SESSION['message'] = 'Libro actualizado con éxito';
@@ -40,7 +47,8 @@ if (isset($_POST['update'])) {
     <div class="row">
         <div class="col-md-4 mx-auto">
             <div class="card card-body">
-                <form action="/bibliotech/applications/edit_book.php?isbn=<?php echo $_GET['isbn'];?>" method="POST" enctype='multipart/form-data'>
+                <form action="/bibliotech/applications/edit_book.php?isbn=<?php echo $_GET['isbn']; ?>" method="POST"
+                    enctype='multipart/form-data'>
                     <div class="form-group">
                         <label for="title">Título</label>
                         <input type="text" name="title" id="title" class="form-control"
@@ -57,21 +65,26 @@ if (isset($_POST['update'])) {
                                 <div class="form-group">
                                     <label for="isbn">ISBN</label>
                                     <input type="text" name="isbn" id="isbn" class="form-control"
-                                        placeholder="Actualiza ISBN" autofocus value="<?php echo $isbn; ?>" </div>
+                                        placeholder="Actualiza ISBN" autofocus disabled value="<?php echo $isbn; ?>"
+                                        </div>
 
                                     <div class="form-group">
                                         <label for="description">Descripción</label>
-                                        <textarea name="description" id="description" rows="10" cols="30" class="form-control"
-                                            placeholder="Actualiza una descripción" ><?php echo $description; ?></textarea>
+                                        <textarea name="description" id="description" rows="10" cols="30"
+                                            class="form-control"
+                                            placeholder="Actualiza una descripción"><?php echo $description; ?></textarea>
                                     </div>
+    
                                     <div class="form-group">
                                         <label for="image">Imagen</label>
                                         <input type="file" name="image" id="image">
                                     </div>
 
-                                    <input type="submit" class="btn btn-success btn-block" name="update" value="Actualizar">
+                                    <input type="submit" class="btn btn-success btn-block" name="update"
+                                        value="Actualizar">
                 </form>
             </div>
         </div>
     </div>
 </div>
+<?php include ("../applications/footer.php");?>
