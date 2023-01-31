@@ -13,7 +13,7 @@ if (mysqli_num_rows($result) == 1) {
     $author_name = $row['author_name'];
     $author_lastName = $row['author_lastname'];
     $description = $row['description'];
-    $image_name = basename($_FILES['image']['name']);
+    $image_name = $row['image'];
 }
 
 if (isset($_POST['update'])) {
@@ -24,11 +24,15 @@ if (isset($_POST['update'])) {
     $description = $_POST['description'];
     $image_name = basename($_FILES['image']['name']);
     $image_file = $_FILES['image']['tmp_name'];
-    $query = "UPDATE books set title = '$title', author_name = '$author_name', author_lastname = '$author_lastName', description = '$description', image = '$image_name' WHERE isbn = $isbn";
+    $directory_route = '../assets/img/'. $image_name;
+    move_uploaded_file($image_file,$directory_route);
+    $db_image_route = 'assets/img/'. $image_name;
+    $query = "UPDATE books set title = '$title', author_name = '$author_name', author_lastname = '$author_lastName', description = '$description', image = '$db_image_route' WHERE isbn = $isbn";
     mysqli_query($conn, $query);
     $_SESSION['message'] = 'Libro actualizado con éxito';
     $_SESSION['message_type'] = 'warning';
-    header("Location: second_page.php");
+    header("Location: /bibliotech/pages/second_page.php");
+
 }
 ?>
 
@@ -36,7 +40,7 @@ if (isset($_POST['update'])) {
     <div class="row">
         <div class="col-md-4 mx-auto">
             <div class="card card-body">
-                <form action="/bibliotech/applications/edit_book.php?isbn=<?php echo $_GET['isbn'];?>" method="POST">
+                <form action="/bibliotech/applications/edit_book.php?isbn=<?php echo $_GET['isbn'];?>" method="POST" enctype='multipart/form-data'>
                     <div class="form-group">
                         <label for="title">Título</label>
                         <input type="text" name="title" id="title" class="form-control"
