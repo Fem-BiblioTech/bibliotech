@@ -16,7 +16,7 @@ Trabajo en grupo en el que desarrollamos un CRUD con PHP vanilla conectado a una
    
 ## :iphone: Referencia gráfica del diseño movil
 ​
-![Movil](https://i.ibb.co/WGPHkn1/figma1.png)   
+![Movil](https://github.com/Fem-BiblioTech/bibliotech/blob/main/assets/project_img/Pantalla%20principal%20(m).png)
 ​ ​
 # :computer: Referencia gráfica del diseño desktop
 ​
