@@ -15,12 +15,12 @@ $result_books = mysqli_query ($conn, $query);
 
 while ($row = mysqli_fetch_array ($result_books)) {
 ?>
-<div class="card" style="width: 18rem;">
+<div class="card card-box-shadow"  style="width: 18rem;">
 
     <div>
       <a href="/bibliotech/applications/see_description.php?isbn=<?= $row['isbn']?>">
         <figure>
-          <img src= <?php echo $row ['image']?> class="card-img-top">
+          <img src= <?php echo $row ['image']?> class="card-img-top" alt="Portada libro <?php echo $row ["title"] ?>">
           <div class="layer">
             <button  class="btn btn-light" type="submit" value="VER FICHA">VER FICHA</button>
           </div>
