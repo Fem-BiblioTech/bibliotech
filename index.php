@@ -17,8 +17,8 @@ while ($row = mysqli_fetch_array ($result_books)) {
 ?>
 <div class="card" style="width: 18rem;">
 
-    <div class= "description-container">
-      <a href="#">
+    <div>
+      <a href="/bibliotech/applications/see_description.php?isbn=<?= $row['isbn']?>">
         <figure>
           <img src= <?php echo $row ['image']?> class="card-img-top">
           <div class="layer">
