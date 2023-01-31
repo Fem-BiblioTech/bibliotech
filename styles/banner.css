@@ -1,0 +1,37 @@
+.styleNav{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 80px;
+    font-weight: 800;
+    display: flex;
+    text-align:center;
+    color: white;   
+    inline-size: 800px;
+    overflow-wrap: break-word;
+}
+
+.bannerContainer{
+    position: relative;
+}
+
+.input-container{
+    width: 500px;
+        height: 40px;
+        background-color: white;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+}
+
+
+.input-container>input{
+    flex: 1;
+	height: 30px;
+	border: none;
+	outline: none;
+	font-size: 18px;
+	padding-left: 10px;
+}
