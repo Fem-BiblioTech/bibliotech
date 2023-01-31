@@ -10,9 +10,9 @@ Trabajo en grupo en el que desarrollamos un CRUD con PHP vanilla conectado a una
 ​       
     1) Crear y maquetar una aplicación.   
     2) Desarrollar una interfaz de usuario web dinámica y adaptable.
-    3) Las estructura de carpetas deberá estar bien organizada.
-    4) Desarrollar la parte backend con PHP.
-    5) Crear una base de datos con MySQL.      
+    3) Las estructura de carpetas deberá estar bien organizada.   
+    4) Desarrollar la parte backend con PHP.   
+    5) Crear una base de datos con MySQL.        
    
 ## :iphone: Referencia gráfica del diseño movil
 ​
@@ -20,7 +20,7 @@ Trabajo en grupo en el que desarrollamos un CRUD con PHP vanilla conectado a una
 ​ ​
 # :computer: Referencia gráfica del diseño desktop
 ​
-![Desktop](https://i.ibb.co/6w1Rgft/final.png)   
+![Desktop](https://github.com/Fem-BiblioTech/bibliotech/blob/main/assets/project_img/escritorio.png)   
 ​
 ​
 ## :hammer_and_wrench: Herramientas
