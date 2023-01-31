@@ -16,7 +16,19 @@ $result_books = mysqli_query ($conn, $query);
 while ($row = mysqli_fetch_array ($result_books)) {
 ?>
 <div class="card" style="width: 18rem;">
-  <img src= <?php echo $row ['image']?> class="card-img-top">
+
+    <div class= "description-container">
+      <a href="#">
+        <figure>
+          <img src= <?php echo $row ['image']?> class="card-img-top">
+          <div class="layer">
+            <button  class="btn btn-light" type="submit" value="VER FICHA">VER FICHA</button>
+          </div>
+        </figure>
+      </a>
+    </div>
+
+
   <div class="card-body">
     <h3 class="card-title"><?php echo $row ['title'] ?></h3>
     <h5 class="card-text"><?php echo $row ['author_name'] . ' ' . $row['author_lastname'] ?></h5>
