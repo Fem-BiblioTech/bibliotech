@@ -12,7 +12,7 @@ $query = "SELECT * FROM books WHERE author_name LIKE '%$search%' OR author_lastn
 $result = mysqli_query($conn,$query);
 
 if (!$result)  {
-    die("query fallido");
+    echo("query fallido");
    }
 
 ?>

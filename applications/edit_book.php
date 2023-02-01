@@ -37,7 +37,7 @@ if (isset($_POST['update'])) {
     $query = $query . " WHERE isbn = $isbn";
     mysqli_query($conn, $query);
     $_SESSION['message'] = 'Libro actualizado con éxito';
-    $_SESSION['message_type'] = 'warning';
+    $_SESSION['message_type'] = 'success';
     header("Location: /bibliotech/pages/second_page.php");
 
 }
