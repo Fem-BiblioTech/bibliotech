@@ -1,4 +1,4 @@
-# :books: BiblioTech :bookmark:   
+# :books: BiblioTech  
 
 Desde BiblioTech organizamos nuestras recomendaciones de libros en un programa web.   
 Nuestro inventario permite añadir nuevas recomendaciones, actualizarlas y borrarlas si es necesario.   
@@ -16,11 +16,11 @@ Trabajo en grupo en el que desarrollamos un CRUD con PHP vanilla conectado a una
    
 ## :iphone: Referencia gráfica del diseño movil
 
-![Movil](https://github.com/Fem-BiblioTech/bibliotech/blob/main/assets/project_img/movil.png)
+<p align="center"><img width="180" alt="nombre" src="https://github.com/Fem-BiblioTech/bibliotech/blob/main/assets/project_img/movil.png"></p>
 
 # :computer: Referencia gráfica del diseño desktop
 
-![Desktop](https://github.com/Fem-BiblioTech/bibliotech/blob/main/assets/project_img/escritorio.png)   
+<p align="center"><img width="500" alt="nombre" src="https://github.com/Fem-BiblioTech/bibliotech/blob/main/assets/project_img/escritorio.png"></p>
 
 ## :hammer_and_wrench: Herramientas
 - Figma
