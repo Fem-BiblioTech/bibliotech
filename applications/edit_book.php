@@ -17,7 +17,6 @@ if (mysqli_num_rows($result) == 1) {
     $author_name = $row['author_name'];
     $author_lastName = $row['author_lastname'];
     $description = $row['description'];
-    /* $image_name = $row['image']; */
 }
 
 if (isset($_POST['update'])) {

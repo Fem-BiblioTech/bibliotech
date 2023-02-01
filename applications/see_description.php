@@ -20,7 +20,7 @@ while ($row= mysqli_fetch_array($result)){?>
 <div class="card mb-3 shadow mx-auto verticalMargin" style="max-width: 60%;">
   <div class="row g-0">
     <div class="col-md-4">
-      <img src= "../<?php echo $row ["image"]?>" class="img-fluid rounded-start" alt="Portada libro <?php echo $row ["title"] ?>">
+      <img src= "../<?php echo $row ["image"]?>" class="card-img-top rounded-start" alt="Portada libro <?php echo $row ["title"] ?>">
     </div>
     <div class="col-md-8">
       <div class="card-body">
