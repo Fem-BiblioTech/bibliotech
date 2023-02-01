@@ -22,6 +22,7 @@
    }
    $_SESSION['message'] = 'Libro agregado sfactoriamatisente';
    $_SESSION['message_type'] = 'success';
+   $_SESSION['message_title'] = 'Buen trabajo';
    header ("Location: /bibliotech");
   }
   

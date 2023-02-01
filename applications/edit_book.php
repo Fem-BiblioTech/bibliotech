@@ -38,6 +38,7 @@ if (isset($_POST['update'])) {
     mysqli_query($conn, $query);
     $_SESSION['message'] = 'Libro actualizado con éxito';
     $_SESSION['message_type'] = 'success';
+    $_SESSION['message_title'] = 'Buen trabajo';
     header("Location: /bibliotech/pages/second_page.php");
 
 }

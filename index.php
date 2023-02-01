@@ -9,15 +9,17 @@ include("applications/banner.php")
 ?>
 
 <?php if(isset($_SESSION['message'])) { 
-  $msg = $_SESSION['message'];?>
-<script>
-  Swal.fire({
-    icon: 'success',
-    title: 'Buen trabajo',
-    text: '<?php echo $msg; ?>',
-    confirmButtonColor: '#000000'
-  })
-</script>
+   $msg = $_SESSION['message'];
+   $type = $_SESSION['message_type'];
+   $title = $_SESSION['message_title'];?>
+ <script>
+   Swal.fire({
+     icon: '<?php echo $type; ?>',
+     title: '<?php echo $title; ?>',
+     text: '<?php echo $msg; ?>',
+     confirmButtonColor: '#000000'
+   })
+ </script>
 
 <?php session_unset(); }?>
 

@@ -15,4 +15,11 @@ if (!$result)  {
     echo("query fallido");
    }
 
+if (mysqli_num_rows($result) === 0) {
+    $_SESSION['message'] = 'Libro no disponible';
+    $_SESSION['message_type'] = 'warning';
+    $_SESSION['message_title'] = 'Lo siento';
+}
+
+
 ?>
