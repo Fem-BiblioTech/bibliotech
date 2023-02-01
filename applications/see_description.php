@@ -17,7 +17,7 @@ else
 
 while ($row= mysqli_fetch_array($result)){?>
 
-<div class="card mb-3 shadow" style="max-width: 60%;">
+<div class="card mb-3 shadow mx-auto verticalMargin" style="max-width: 60%;">
   <div class="row g-0">
     <div class="col-md-4">
       <img src= "../<?php echo $row ["image"]?>" class="img-fluid rounded-start" alt="Portada libro <?php echo $row ["title"] ?>">
@@ -35,8 +35,7 @@ while ($row= mysqli_fetch_array($result)){?>
        <a href = "../applications/delete_book.php?isbn=<?= $row['isbn']?>" class="btn btn-danger">
         Eliminar
            </a>
-           
-        
+          
       </div>
     </div>
   </div>

@@ -33,8 +33,6 @@
             <input type="file" class="form-control" id="inputGroupFile01" name="image">
           </div>
 
-           <!--  <div class="form-group"><label for="image">Imagen</label>
-            <input type="file" name="image" id="image"></div> -->
             <div class="d-grid gap-2">
               <input type="submit" class="btn btn-dark btn-block" name="save_book" value="Agregar registro"> 
             </div>
