@@ -1,6 +1,6 @@
 # :books: BiblioTech  
 
-Desde BiblioTech organizamos nuestros libros en una plataforma web. Nuestro inventario permite añadir nuevas recomendaciones, actualizarlas y borrarlas de ser necesario.Espero disfrutes del abanico de buenas lecturas disponible y no dudes en contactarnos para añadir tus sugerencias.
+Desde BiblioTech organizamos nuestros libros en una plataforma web. Nuestro inventario permite añadir nuevas recomendaciones, actualizarlas y borrarlas de ser necesario. Espero disfrutes del abanico de buenas lecturas disponible y no dudes en contactarnos para añadir tus sugerencias.
 
 Trabajo en grupo en el que desarrollamos un CRUD con PHP vanilla conectado a una base de datos MySQL.   
       
@@ -47,7 +47,8 @@ Trabajo en grupo en el que desarrollamos un CRUD con PHP vanilla conectado a una
 
 ## :blue_book:Prototipo
 
-[Prototipo](https://www.figma.com/proto/hlFpTtoIP0QdTLRPsmCSLq/Biblioteca?node-id=27%3A101&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=16%3A3)
+[Prototipo-movil](https://www.figma.com/proto/hlFpTtoIP0QdTLRPsmCSLq/Biblioteca?node-id=53%3A235&starting-point-node-id=53%3A235)
+[Prototipo-escritorio](https://www.figma.com/proto/hlFpTtoIP0QdTLRPsmCSLq/Biblioteca?node-id=16%3A3&starting-point-node-id=16%3A3)
 
 ## :raising_hand_woman:Authors
 
@@ -65,3 +66,8 @@ Trabajo en grupo en el que desarrollamos un CRUD con PHP vanilla conectado a una
 - [Efecto Hover a una Imagen con Html y Css](https://youtu.be/Z5MoBm99w1Q)
 - [Beautiful CSS box-shadow examples - CSS Scan](https://getcssscan.com/css-box-shadow-examples)
 - [Readme emoji cheat sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)
+- [Css Font size responsive](https://marabelia.com/css-font-size-responsive/)
+- [Como usar sweet alert con base de datos](https://www.youtube.com/watch?v=8H9WOYfSeJc)
+- [Sweet alert 2](https://sweetalert2.github.io/)
+- [PHP ejemplo de validación de formularios](https://programadorwebvalencia.com/PHP-ejemplo-de-validacion-formulario-version-7/)
+- 
