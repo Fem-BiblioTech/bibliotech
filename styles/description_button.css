@@ -43,3 +43,16 @@ figure .layer button{
     font-weight: 700;
 }
 
+#moreInfo{
+    display: none;
+  }
+
+  @media screen and (max-width: 576px){
+    #moreInfo{
+      display: inline-block;
+    }
+
+    figure .layer button{
+        display: none;
+    }
+  }

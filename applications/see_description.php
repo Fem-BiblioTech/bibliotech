@@ -25,15 +25,21 @@ while ($row= mysqli_fetch_array($result)){?>
     <div class="col-md-8">
       <div class="card-body">
         <h3 class="card-title"><?php echo $row ["title"] ?></h3>
-        <h5 class="card-text"><?php echo $row ["author_name"]. ' ' . $row['author_lastname'] ?></h5>
-        <p class="card-text"><?php echo $row ["isbn"] ?></p>
+        <h5 class="card-text gray-text"><?php echo $row ["author_name"]. ' ' . $row['author_lastname'] ?></h5>
+        <p class="card-text gray-text"><?php echo $row ["isbn"] ?></p>
         <p class="card-text"><?php echo $row ["description"] ?></p>
 
-        <a href = "../applications/edit_book.php?isbn= <?php echo $row['isbn'] ?>" class="btn btn-secondary"> 
+        <a href = "../applications/edit_book.php?isbn= <?php echo $row['isbn'] ?>" class="btn btn-secondary desktop-icons"> 
         Editar
         </a>
-       <a href = "../applications/delete_book.php?isbn=<?= $row['isbn']?>" class="btn btn-danger">
+        <a href = "../applications/edit_book.php?isbn= <?php echo $row['isbn'] ?>" class="btn btn-secondary mobile-icons"> 
+        <i class="fa-solid fa-pen-to-square"></i>
+        </a>
+        <a href = "../applications/delete_book.php?isbn=<?= $row['isbn']?>" class="btn btn-danger desktop-icons">
         Eliminar
+           </a>
+        <a href = "../applications/delete_book.php?isbn=<?= $row['isbn']?>" class="btn btn-danger mobile-icons">
+        <i class="fa-solid fa-trash-can"></i>
            </a>
           
       </div>
