@@ -49,7 +49,7 @@ while ($row = mysqli_fetch_array ($result_books)) {
 
   <div class="card-body">
     <h3 class="card-title"><?php echo $row ['title'] ?></h3>
-    <h5 class="card-text"><?php echo $row ['author_name'] . ' ' . $row['author_lastname'] ?></h5>
+    <h5 class="card-text gray-text"><?php echo $row ['author_name'] . ' ' . $row['author_lastname'] ?></h5>
   </div>
 </div>
 <?php } ?>

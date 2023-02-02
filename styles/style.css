@@ -28,3 +28,7 @@ body{
 .verticalMargin{
     margin-top: 10%;
 }
+
+.gray-text{
+    color: var(--gray);
+}

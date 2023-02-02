@@ -25,8 +25,8 @@ while ($row= mysqli_fetch_array($result)){?>
     <div class="col-md-8">
       <div class="card-body">
         <h3 class="card-title"><?php echo $row ["title"] ?></h3>
-        <h5 class="card-text"><?php echo $row ["author_name"]. ' ' . $row['author_lastname'] ?></h5>
-        <p class="card-text"><?php echo $row ["isbn"] ?></p>
+        <h5 class="card-text gray-text"><?php echo $row ["author_name"]. ' ' . $row['author_lastname'] ?></h5>
+        <p class="card-text gray-text"><?php echo $row ["isbn"] ?></p>
         <p class="card-text"><?php echo $row ["description"] ?></p>
 
         <a href = "../applications/edit_book.php?isbn= <?php echo $row['isbn'] ?>" class="btn btn-secondary"> 
