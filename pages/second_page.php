@@ -33,11 +33,17 @@ while ($row= mysqli_fetch_array($result)){?>
         <p class="card-text gray-text"><?php echo $row ["isbn"] ?></p>
         <p class="card-text"><?php echo $row ["description"] ?></p>
 
-        <a href = "../applications/edit_book.php?isbn= <?php echo $row['isbn'] ?>" class="btn btn-secondary"> 
+        <a href = "../applications/edit_book.php?isbn= <?php echo $row['isbn'] ?>" class="btn btn-secondary desktop-icons"> 
         Editar
         </a>
-       <a href = "../applications/delete_book.php?isbn=<?= $row['isbn']?>" class="btn btn-danger">
+        <a href = "../applications/edit_book.php?isbn= <?php echo $row['isbn'] ?>" class="btn btn-secondary mobile-icons"> 
+        <i class="fa-solid fa-pen-to-square"></i>
+        </a>
+        <a href = "../applications/delete_book.php?isbn=<?= $row['isbn']?>" class="btn btn-danger desktop-icons">
         Eliminar
+           </a>
+        <a href = "../applications/delete_book.php?isbn=<?= $row['isbn']?>" class="btn btn-danger mobile-icons">
+        <i class="fa-solid fa-trash-can"></i>
            </a>
                   
       </div>
