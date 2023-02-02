@@ -28,3 +28,21 @@ body{
 .verticalMargin{
     margin-top: 10%;
 }
+
+.gray-text{
+    color: var(--gray);
+}
+
+.mobile-icons{
+    display: none !important;
+}
+
+@media screen and (max-width: 576px){
+    .mobile-icons{
+        display: inline-block !important;
+    }
+    .desktop-icons{
+        display: none !important;
+    }
+
+}
