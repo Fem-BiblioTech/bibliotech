@@ -37,6 +37,17 @@ body{
     display: none !important;
 }
 
+.center-content{
+    display: flex;
+    justify-content: center;
+
+}
+
+.center-content img{
+    width: 143px;
+    height: 217px;
+}
+
 @media screen and (max-width: 576px){
     .mobile-icons{
         display: inline-block !important;
