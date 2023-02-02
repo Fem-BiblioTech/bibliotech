@@ -20,7 +20,7 @@
    if (!$result)  {
     echo("query fallido");
    }
-   $_SESSION['message'] = 'Libro agregado sfactoriamatisente';
+   $_SESSION['message'] = 'Libro agregado exitosamente';
    $_SESSION['message_type'] = 'success';
    $_SESSION['message_title'] = 'Buen trabajo';
    header ("Location: /bibliotech");
