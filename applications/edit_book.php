@@ -77,7 +77,11 @@ if (isset($_POST['update'])) {
                                             class="form-control"
                                             placeholder="Actualiza una descripción"><?php echo $description; ?></textarea>
                                     </div>
-    
+
+                                    <div class="center-content ">
+                                      <img src= "../<?php echo $row ["image"]?>" class="card-img-center rounded" alt="Portada libro <?php echo $row ["title"] ?>">
+                                    </div>
+
                                     <div class="input-group mb-3 mt-2">
                                         <label  class="input-group-text" for="inputGroupFile01">Imagen</label>
                                         <input type="file" name="image" class="form-control" id="inputGroupFile01">
