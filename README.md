@@ -1,6 +1,6 @@
 # :books: BiblioTech  
 
-Desde BiblioTech organizamos nuestros libros en una plataforma web. Nuestro inventario permite añadir nuevas recomendaciones, actualizarlas y borrarlas de ser necesario.Espero disfrutes del abanicos de buenas lecturas disponible y no dudes en contactarnos para añadir tus sugerencias.
+Desde BiblioTech organizamos nuestros libros en una plataforma web. Nuestro inventario permite añadir nuevas recomendaciones, actualizarlas y borrarlas de ser necesario.Espero disfrutes del abanico de buenas lecturas disponible y no dudes en contactarnos para añadir tus sugerencias.
 
 Trabajo en grupo en el que desarrollamos un CRUD con PHP vanilla conectado a una base de datos MySQL.   
       
