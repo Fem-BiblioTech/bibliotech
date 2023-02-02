@@ -8,11 +8,18 @@
 include("applications/banner.php")
 ?>
 
-<?php if(isset($_SESSION['message'])) { ?>
-<div class="alert alert-success alert-dismissible fade show" role="alert">
-  <?= $_SESSION['message']?>
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
+<?php if(isset($_SESSION['message'])) { 
+   $msg = $_SESSION['message'];
+   $type = $_SESSION['message_type'];
+   $title = $_SESSION['message_title'];?>
+ <script>
+   Swal.fire({
+     icon: '<?php echo $type; ?>',
+     title: '<?php echo $title; ?>',
+     text: '<?php echo $msg; ?>',
+     confirmButtonColor: '#000000'
+   })
+ </script>
 
 <?php session_unset(); }?>
 

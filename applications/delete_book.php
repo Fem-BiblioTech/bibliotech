@@ -10,6 +10,7 @@ include("../db.php");
         echo("Búsqueda fallida");
 
     $_SESSION['message'] = "Libro eliminado con éxito";
-    $_SESSION['message_type'] = 'danger';
+    $_SESSION['message_type'] = 'success';
+    $_SESSION['message_title'] = 'Buen trabajo';
 
 ?>

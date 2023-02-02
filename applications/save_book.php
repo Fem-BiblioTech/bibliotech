@@ -18,10 +18,11 @@
    $query = "INSERT INTO books (isbn, title, author_name, author_lastname, description, image) VALUES ('$isbn','$title','$author_name','$author_lastName','$description','$db_image_route')";
    $result = mysqli_query($conn, $query);
    if (!$result)  {
-    die("query fallido");
+    echo("query fallido");
    }
-   $_SESSION['message'] = 'Libro agregado satisfactoriamente';
+   $_SESSION['message'] = 'Libro agregado sfactoriamatisente';
    $_SESSION['message_type'] = 'success';
+   $_SESSION['message_title'] = 'Buen trabajo';
    header ("Location: /bibliotech");
   }
   

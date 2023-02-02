@@ -5,7 +5,7 @@
 @import url(./description_button.css);
 
 :root{
-    --black: black;
+    --black: #000000;
     --red: #C02222;
     --gray: #878585;
     --white: white; 
@@ -26,5 +26,5 @@ body{
 }
 
 .verticalMargin{
-    margin-top: 15%;
+    margin-top: 10%;
 }
