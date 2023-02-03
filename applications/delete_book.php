@@ -9,8 +9,4 @@ include("../db.php");
     else 
         echo("Búsqueda fallida");
 
-    $_SESSION['message'] = "Libro eliminado con éxito";
-    $_SESSION['message_type'] = 'success';
-    $_SESSION['message_title'] = 'Buen trabajo';
-
 ?>

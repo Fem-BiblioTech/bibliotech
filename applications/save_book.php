@@ -15,13 +15,31 @@ if (isset($_POST['save_book'])) {
 
   $directory_route = '../assets/img/' . $image_name;
   $db_image_route = 'assets/img/' . $image_name;
-  move_uploaded_file($image_file, $directory_route);
 
+  if (!is_numeric($isbn)){
+    $_SESSION['message'] = 'ISBN debe contener solo numeros.';
+    $_SESSION['message_type'] = 'error';
+    $_SESSION['message_title'] = 'Lo siento';
 
-  $query = "INSERT INTO books (isbn, title, author_name, author_lastname, description, image) VALUES ('$isbn','$title','$author_name','$author_lastName','$description','$db_image_route')";
-  $result = mysqli_query($conn, $query);
-  $_SESSION['message'] = 'Libro agregado exitosamente';
-  $_SESSION['message_type'] = 'success';
-  $_SESSION['message_title'] = 'Buen trabajo';
+  } else{
+
+    $result = $conn->query("SELECT EXISTS (SELECT * FROM books WHERE isbn='$isbn');");
+    $row=mysqli_fetch_row($result);
+    
+    if ($row[0] == "1"){
+      $_SESSION['message'] = 'El ISBN ya existe, agrega un ISBN direrente.';
+      $_SESSION['message_type'] = 'error';
+      $_SESSION['message_title'] = 'Lo siento';
+      
+    }else{
+      $query = "INSERT INTO books (isbn, title, author_name, author_lastname, description, image) VALUES ('$isbn','$title','$author_name','$author_lastName','$description','$db_image_route')";
+      $result = mysqli_query($conn, $query);
+      move_uploaded_file($image_file, $directory_route);
+      $_SESSION['message'] = 'Libro agregado exitosamente';
+      $_SESSION['message_type'] = 'success';
+      $_SESSION['message_title'] = 'Buen trabajo';
+    }
+  }
   header("Location: /bibliotech");
+
 }

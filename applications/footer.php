@@ -7,15 +7,6 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <?php if (isset($errores)): ?>
-        <ul class="errores">
-            <?php 
-                foreach ($errores as $error) {
-                    echo '<li>' . $error . '</li>';
-                } 
-            ?> 
-        </ul>
-        <?php endif; ?>
         <form action="/bibliotech/applications/save_book.php" method="POST" enctype='multipart/form-data'>
 
           <div class="form-group pb-1"><label for="title">Título</label>
@@ -34,7 +25,7 @@
           </div>
 
           <div class="form-group py-1"><label for="isbn" required>ISBN</label>
-            <input type="text" name="isbn" id="isbn" class="form-control" placeholder="Agrega ISBN" autofocus required>
+            <input type="text" name="isbn" id="isbn" class="form-control" placeholder="Agrega ISBN" autofocus required maxlength="17">
           </div>
           <div class="form-group py-1"><label for="description">Descripción</label>
             <textarea name="description" id="description" rows="2" class="form-control"

@@ -3,20 +3,6 @@
 
 ?>
 
-<?php if(isset($_SESSION['message'])) {
-  $msg = $_SESSION['message'];
-  $type = $_SESSION['message_type'];
-  $title = $_SESSION['message_title'];?>
-<script>
-  Swal.fire({
-    icon: '<?php echo $type; ?>',
-    title: '<?php echo $title; ?>',
-    text: '<?php echo $msg; ?>',
-    confirmButtonColor: '#000000'
-  })
-</script>
-<?php session_unset(); }?>
-
 <?php 
 
 while ($row= mysqli_fetch_array($result)){?>
@@ -39,17 +25,40 @@ while ($row= mysqli_fetch_array($result)){?>
         <a href = "../applications/edit_book.php?isbn= <?php echo $row['isbn'] ?>" class="btn btn-secondary mobile-icons"> 
         <i class="fa-solid fa-pen-to-square"></i>
         </a>
-        <a href = "../applications/delete_book.php?isbn=<?= $row['isbn']?>" class="btn btn-danger desktop-icons">
+        <button class="btn btn-danger desktop-icons" onclick="deleteYesOrNo(event)">
         Eliminar
-           </a>
-        <a href = "../applications/delete_book.php?isbn=<?= $row['isbn']?>" class="btn btn-danger mobile-icons">
-        <i class="fa-solid fa-trash-can"></i>
-           </a>
-                  
+           </button>
+           <button class="btn btn-danger mobile-icons" onclick="deleteYesOrNo(event)">
+           <i class="fa-solid fa-trash-can"></i>
+           </button>              
       </div>
     </div>
   </div>
 </div>
+
+<script>
+    function deleteYesOrNo(event) {
+      Swal.fire({
+      title: 'Quieres eliminar el libro?',
+      text: "Si, has clicado por error, puedes cancelar!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí, eliminalo!',
+      cancelButtonText: 'Cancelar!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location= "../applications/delete_book.php?isbn=<?= $row['isbn']?>"
+        Swal.fire(
+          'Eliminado!',
+          'El libro ha sido eliminado exitosamente.',
+          'success'
+        )
+      }
+    })
+  }
+</script>
 
 <?php }
 ?>  
