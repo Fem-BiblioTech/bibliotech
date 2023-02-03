@@ -11,9 +11,6 @@ $query = "SELECT * FROM books WHERE author_name LIKE '%$search%' OR author_lastn
 
 $result = mysqli_query($conn,$query);
 
-if (!$result)  {
-    echo("query fallido");
-   }
 
 if (mysqli_num_rows($result) === 0) {
     $_SESSION['message'] = 'Libro no disponible';

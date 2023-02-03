@@ -8,9 +8,6 @@ $conn = mysqli_connect(
     'bibliotech'
 );
 
-// to check if the connection works
-// if (isset($conn)){
-//     echo 'DB is connected';
-// }
+
 
 ?>
