@@ -72,4 +72,3 @@ Trabajo en grupo en el que desarrollamos un CRUD con PHP vanilla conectado a una
 - [Como usar sweet alert con base de datos](https://www.youtube.com/watch?v=8H9WOYfSeJc)
 - [Sweet alert 2](https://sweetalert2.github.io/)
 - [PHP ejemplo de validación de formularios](https://programadorwebvalencia.com/PHP-ejemplo-de-validacion-formulario-version-7/)
-- 
