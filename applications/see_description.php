@@ -1,8 +1,18 @@
-<?php include("../applications/header.php"); include  ("../applications/read.php"); include ("../applications/nav.php"); 
+<?php
+include("../applications/header.php");
+include ("../applications/nav.php"); 
+include("../db.php");
 
-
+if (isset($_GET['isbn'])) {
+    $isbn = $_GET['isbn'];
+    $query = "SELECT * FROM books WHERE isbn LIKE '%$isbn%'";
+    $result = mysqli_query($conn, $query);
+}
+else 
+    echo("Búsqueda fallida");
 ?>
 
+    
 <?php 
 
 while ($row= mysqli_fetch_array($result)){?>
@@ -27,10 +37,11 @@ while ($row= mysqli_fetch_array($result)){?>
         </a>
         <button class="btn btn-danger desktop-icons" onclick="deleteYesOrNo(event)">
         Eliminar
-           </button>
-           <button class="btn btn-danger mobile-icons" onclick="deleteYesOrNo(event)">
+        </button>
+        <button class="btn btn-danger mobile-icons" onclick="deleteYesOrNo(event)">
            <i class="fa-solid fa-trash-can"></i>
-           </button>              
+        </button> 
+          
       </div>
     </div>
   </div>
